@@ -1,0 +1,24 @@
+<style>
+    nav {
+        background-color: #1b1d1f;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    nav a {
+        color: #3b63be;
+        font-size: 2em;
+        font-family: CthulhumbusUG;
+        padding-left: 25px;
+        text-decoration: none;
+    }
+
+    .nav-home {
+        color: #c9eafa;
+    }
+    
+</style>
+<nav>
+    <a class="nav-home" href="{{ url_for('home.index') }}">CoC Character Sheet Editor</a>
+    <a href="#">Dice Roller</a>
+</nav>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} {% endblock %} - CoC Character Sheet Editor</title>
+        <style>
+            @font-face {
+                font-family: CthulhumbusUG;
+                src: url("/static/fonts/JMHCthulhumbusUG.ttf") format("truetype");
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,body {
+                background-color: #34363a;
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 20vw;
+                padding-right: 20vw;
+            }
+        </style>
+    </head>
+    <body>
+        {% include "header.html" %}
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+        {% include "footer.html" %}
+    </body>
+</html>

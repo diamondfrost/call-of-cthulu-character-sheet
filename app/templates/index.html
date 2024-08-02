@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .home-label {
+            font-family: CthulhumbusUG;
+            text-align: center;
+            width: 100%;
+        }
+        .main-buttons-container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .main-buttons-container button {
+            height: 40vh;
+            width: 20vw;
+            min-height: 300px;
+            min-width: 300px;
+            background-color: #1b1d1f;
+            color: #c9eafa;
+            font-size: 2em;
+            font-family: CthulhumbusUG;
+            border-radius: 25px;
+            border: none;
+        }
+
+        .main-buttons-container button:active {
+            background-color: #34363a;
+            color: #5bc8ff;
+            border: #1b1d1f solid 2px;
+        }
+    </style>
+    <span class="title" hidden>{% block title %} Home {% endblock %}</span>
+    <h1 class="home-label">What would you like to do?</h1>
+    <div class="main-buttons-container">
+        <button>Create a new character</button>
+        <button>Edit a Character</button>
+    </div>
+{% endblock %}
