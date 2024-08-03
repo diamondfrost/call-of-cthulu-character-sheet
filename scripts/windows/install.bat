@@ -1,0 +1,1 @@
+python -m venv coc-sheet-env & ..\..\coc-sheet-env\Scripts\activate & pip install -r ..\..\requirements.txt
