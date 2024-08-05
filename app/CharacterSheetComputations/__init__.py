@@ -3,77 +3,120 @@ import math
 from app.DiceRolls import roll_dice
 
 
-def roll_strength() -> int:
+def roll_strength(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Strength Stat. Equation is 3d6*5.
+    
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Strength Stat result.
     """
-    return roll_dice(6,3)*5
+    
+    return (d6_1 + d6_2 + d6_3)*5
 
-def roll_dexterity() -> int:
+def roll_dexterity(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Dexterity Stat. Equation is 3d6*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Dexterity Stat result.
     """
-    return roll_dice(6,3)*5
+    return (d6_1 + d6_2 + d6_3)*5
 
-def roll_constitution() -> int:
+def roll_constitution(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Constitution Stat. Equation is 3d6*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Constitution Stat result.
     """
-    return roll_dice(6,3)*5
+    return (d6_1 + d6_2 + d6_3)*5
 
-def roll_appearance() -> int:
+def roll_appearance(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Appearance Stat. Equation is 3d6*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Appearance Stat result.
     """
-    return roll_dice(6,3)*5
+    return (d6_1 + d6_2 + d6_3)*5
 
-def roll_power() -> int:
+def roll_power(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Power Stat. Equation is 3d6*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Power Stat result.
     """
-    return roll_dice(6,3)*5
+    return (d6_1 + d6_2 + d6_3)*5
 
-def roll_size() -> int:
+def roll_size(d6_1: int, d6_2: int) -> int:
     """Roll for Character Size Stat. Equation is (2d6+6)*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
 
     Returns:
         int: Character Size Stat result.
     """
-    return (roll_dice(6,2)+6)*5
+    return ((d6_1 + d6_2)+6)*5
 
-def roll_education() -> int:
+def roll_education(d6_1: int, d6_2: int) -> int:
     """Roll for Character Education Stat. Equation is (2d6+6)*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
 
     Returns:
         int: Character Education Stat result.
     """
-    return (roll_dice(6,2)+6)*5
+    return ((d6_1 + d6_2)+6)*5
 
-def roll_intelligence() -> int:
+def roll_intelligence(d6_1: int, d6_2: int) -> int:
     """Roll for Character Intelligence Stat. Equation is (2d6+6)*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
 
     Returns:
         int: Character Intelligence Stat result.
     """
-    return (roll_dice(6,2)+6)*5
+    return ((d6_1 + d6_2)+6)*5
 
-def roll_luck() -> int:
+def roll_luck(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Luck Stat. Equation is 3d6*5.
+
+    Args:
+        d6_1 (int): first D6
+        d6_2 (int): second D6
+        d6_3 (int): third D6
 
     Returns:
         int: Character Luck Stat result.
     """
-    return roll_dice(6,3)*5
+    return (d6_1 + d6_2 + d6_3)*5
 
 def compute_max_hp(constitution: int, size: int) -> int:
     """Character health points. Computed via round_down((con + siz)/10).

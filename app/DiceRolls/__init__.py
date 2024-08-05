@@ -1,20 +1,17 @@
 from random import randint
 
-from app.CustomExceptions import NumberOfDiceException, NumberOfDiceSidesException
+from app.CustomExceptions import NumberOfDiceSidesException
 
-def roll_dice(sides: int = 6, num_of_dice: int = 1) -> int:
-    """Roll a number of D6s. Default number of dice is 1.
+def roll_dice(sides: int = 6) -> int:
+    """Roll a dice. Default number of sides of the dice is 6.
 
     Args:
         sides (int, optional): Number of sides of dice to be rolled. Defaults to 6. Cannot be less than 1 else throws an exception.
-        num_of_dice (int, optional): Number of D6 to be rolled. Defaults to 1. Cannot be less than 1 else throws an exception.
 
     Returns:
-        int: Sum of rolling a set number of D6.
+        int: Sum of rolling a of dice.
     """
-    if num_of_dice <= 0:
-        raise NumberOfDiceException(num_of_dice)
-    elif sides <= 0:
+    if sides <= 0:
         raise NumberOfDiceSidesException(sides)
     else:
         result: int = 0

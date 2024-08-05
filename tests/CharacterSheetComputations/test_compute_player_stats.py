@@ -1,32 +1,32 @@
 from app.CharacterSheetComputations import compute_build_mod, compute_damage_bonus, compute_dodge, compute_hobby_skill_points, compute_max_hp, compute_max_mp, compute_max_sanity, compute_move_rate, compute_occupation_skill_points, roll_appearance, roll_constitution, roll_dexterity, roll_education, roll_intelligence, roll_luck, roll_power, roll_size, roll_strength
-
+from app.DiceRolls import roll_dice
 
 def test_strength_roll():
-    assert 0 < roll_strength() < 100
+    assert 0 < roll_strength(roll_dice(), roll_dice(), roll_dice()) < 100
     
 def test_dexterity_roll():
-    assert 0 < roll_dexterity() < 100
+    assert 0 < roll_dexterity(roll_dice(), roll_dice(), roll_dice()) < 100
 
 def test_constitution_roll():
-    assert 0 < roll_constitution() < 100
+    assert 0 < roll_constitution(roll_dice(), roll_dice(), roll_dice()) < 100
 
 def test_appearance_roll():
-    assert 0 < roll_appearance() < 100
+    assert 0 < roll_appearance(roll_dice(), roll_dice(), roll_dice()) < 100
 
 def test_power_roll():
-    assert 0 < roll_power() < 100
+    assert 0 < roll_power(roll_dice(), roll_dice(), roll_dice()) < 100
     
 def test_size_roll():
-    assert 0 < roll_size() < 100
+    assert 0 < roll_size(roll_dice(), roll_dice()) < 100
     
 def test_education_roll():
-    assert 0 < roll_education() < 100
+    assert 0 < roll_education(roll_dice(), roll_dice()) < 100
     
 def test_intelligence_roll():
-    assert 0 < roll_intelligence() < 100
+    assert 0 < roll_intelligence(roll_dice(), roll_dice()) < 100
     
 def test_luck_roll():
-    assert 0 < roll_luck() < 100
+    assert 0 < roll_luck(roll_dice(), roll_dice(), roll_dice()) < 100
 
 def test_compute_max_hp():
     assert 5 == compute_max_hp(35,15)
