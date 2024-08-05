@@ -1,1 +1,1 @@
-pyclean
+pyclean .

@@ -1,4 +1,4 @@
-from app.CharacterSheetComputations import compute_build_mod, compute_damage_bonus, compute_dodge, compute_hobby_skill_points, compute_max_hp, compute_max_mp, compute_max_sanity, compute_move_rate, compute_occupation_skill_points, roll_appearance, roll_constitution, roll_dexterity, roll_education, roll_intelligence, roll_luck, roll_power, roll_size, roll_strength
+from app.CharacterSheetComputations import compute_build_mod, compute_damage_bonus, compute_dodge, compute_hobby_skill_points, compute_max_hp, compute_max_mp, compute_max_sanity, compute_move_rate, compute_occupation_skill_points, parse_equation, roll_appearance, roll_constitution, roll_dexterity, roll_education, roll_intelligence, roll_luck, roll_power, roll_size, roll_strength
 from app.DiceRolls import roll_dice
 
 def test_strength_roll():
@@ -73,3 +73,7 @@ def test_compute_occupation_skill_points():
     
 def test_compute_hobby_skill_points():
     assert 80 == compute_hobby_skill_points(40)
+    
+def test_parse_equation():
+    print(parse_equation("(2D6+6)*5"))
+    assert parse_equation("(2D6+6)*5") == ['(', '2D6', '+', '6', ')', '*', '5']

@@ -1,4 +1,4 @@
-from app.CustomExceptions import NumberOfDiceException, NumberOfDiceSidesException
+from app.CustomExceptions import NumberOfDiceSidesException
 from app.DiceRolls import roll_dice
 import pytest
 

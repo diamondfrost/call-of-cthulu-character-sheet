@@ -14,8 +14,5 @@ def roll_dice(sides: int = 6) -> int:
     if sides <= 0:
         raise NumberOfDiceSidesException(sides)
     else:
-        result: int = 0
-        while num_of_dice > 0:
-            result += randint(1,sides)
-            num_of_dice -= 1
+        result = randint(1,sides)
     return result
