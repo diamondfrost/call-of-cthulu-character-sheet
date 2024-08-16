@@ -14,7 +14,7 @@
             }
 
             html,body {
-                background-color: #34363a;
+                background-color: #1d1e20;
                 margin: 0;
                 padding: 0;
                 width: 100vw;
@@ -31,13 +31,36 @@
                 padding-left: 20vw;
                 padding-right: 20vw;
             }
+            .main-page {
+                z-index: -1;
+            }
+            .modal-container {
+                z-index: 100;
+                background-color: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                align-items: center;
+                justify-content: center;
+            }
         </style>
     </head>
     <body>
-        {% include "header.html" %}
-        <div class="content">
-            {% block content %} {% endblock %}
+        <div class="main-page">
+            {% include "header.html" %}
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+            {% include "footer.html" %}
         </div>
-        {% include "footer.html" %}
+        {# <div class="modal-container">
+            {% include "modal.html" %}
+        </div> #}
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+        
+    </script>
 </html>

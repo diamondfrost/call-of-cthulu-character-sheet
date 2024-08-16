@@ -1,24 +1,47 @@
 <style>
     nav {
-        background-color: #1b1d1f;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        background-color: #131314;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     nav a {
-        color: #3b63be;
+        color: #4e81f8;
         font-size: 2em;
         font-family: CthulhumbusUG;
         padding-left: 25px;
         text-decoration: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav > button {
+        background-color: #131314;
+        line-height: 60px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border: none;
+        font-size: 2em;
+        font-family: CthulhumbusUG;
+        color: #4e81f8;
+        margin-left: 25px;
+    }
+
+    nav > button:active {
+        background-color: #222224;
+        color: #87abff;
     }
 
     .nav-home {
-        color: #c9eafa;
+        color: #71cffd;
     }
     
 </style>
 <nav>
     <a class="nav-home" href="{{ url_for('home.index') }}">CoC Character Sheet Editor</a>
-    <a href="#">Dice Roller</a>
+    <button onclick="">Dice Roller</button>
 </nav>
