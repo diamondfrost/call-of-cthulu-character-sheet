@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %} {% endblock %} - CoC Character Sheet Editor</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <style>
             @font-face {
                 font-family: CthulhumbusUG;
@@ -14,7 +15,7 @@
             }
 
             html,body {
-                background-color: #1d1e20;
+                background-color: #333436;
                 margin: 0;
                 padding: 0;
                 width: 100vw;
@@ -39,7 +40,7 @@
                 background-color: rgba(0, 0, 0, 0.6);
                 width: 100%;
                 height: 100%;
-                display: flex;
+                display: none;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -56,11 +57,16 @@
             </div>
             {% include "footer.html" %}
         </div>
-        {# <div class="modal-container">
+        <div class="modal-container">
             {% include "modal.html" %}
-        </div> #}
+        </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
-        
+    <script>
+        function modal_on() {
+            $('.modal-container').css('display', 'flex');
+        }
+        function modal_off() {
+            $('.modal-container').css('display', 'none');
+        }
     </script>
 </html>
