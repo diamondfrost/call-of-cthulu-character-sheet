@@ -4,9 +4,9 @@ import re
 
 def parse_equation(input:str) -> list :
     r = re.compile('([()+-/*D])')
-    eq_list = r.split(input)
-    eq_list = [i for i in eq_list if i != '']
-    return eq_list
+    parsed_list = r.split(input)
+    parsed_list = [i for i in parsed_list if i != '']
+    return parsed_list
 
 def roll_strength(d6_1: int, d6_2: int, d6_3: int) -> int:
     """Roll for Character Strength Stat. Equation is 3d6*5.
