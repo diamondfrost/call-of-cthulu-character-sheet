@@ -162,4 +162,3 @@ cython_debug/
 #.idea/
 
 coc-sheet-env/
-clear_cache.sh

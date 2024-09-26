@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} {% endblock %} - CoC Character Sheet Editor</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            @font-face {
+                font-family: CthulhumbusUG;
+                src: url("/static/fonts/JMHCthulhumbusUG.ttf") format("truetype");
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,body {
+                background-color: #333436;
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 20vw;
+                padding-right: 20vw;
+            }
+            .main-page {
+                z-index: -1;
+            }
+            .modal-container {
+                z-index: 100;
+                background-color: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                height: 100%;
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-page">
+            {% include "header.html" %}
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+            {% include "footer.html" %}
+        </div>
+        <div class="modal-container">
+            {% include "modal.html" %}
+        </div>
+    </body>
+    <script>
+        function modal_on() {
+            $('.modal-container').css('display', 'flex');
+        }
+        function modal_off() {
+            $('.modal-container').css('display', 'none');
+        }
+    </script>
+</html>
